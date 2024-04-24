@@ -1,0 +1,34 @@
+{
+    "apple": [
+        {
+            "name": "Apple Watch Series 9 black",
+            "color": "black",
+            "price": 1000,
+            "url": "apple_watch_s9_gps_black.gltf"
+        },
+        {
+            "name": "Apple Watch Series 9 blue",
+            "color": "blue",
+            "price": 1000,
+            "url": "apple_watch_s9_gps_blue.gltf"
+        },
+        {
+            "name": "Apple Watch Series 9 gold",
+            "color": "gold",
+            "price": 1000,
+            "url": "apple_watch_s9_gps_gold.gltf"
+        },
+        {
+            "name": "Apple Watch Series 9 red",
+            "color": "red",
+            "price": 1000,
+            "url": "apple_watch_s9_gps_red.gltf"
+        },
+        {
+            "name": "Apple Watch Series 9 white",
+            "color": "white",
+            "price": 1000,
+            "url": "apple_watch_s9_gps_white.gltf"
+        }
+    ]
+}

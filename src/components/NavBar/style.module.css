@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8em 1.2em;
+    width: max-content;
+
+}
+
+
+.socialList {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.icon {
+    cursor: pointer;
+    width: 1.5em;
+    aspect-ratio: 1/1;
+}

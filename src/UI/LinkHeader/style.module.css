@@ -1,0 +1,14 @@
+.link {
+    border-radius: 5em;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5em;
+    padding: 0.5em 1.5em;
+    font-family: Poppins;
+}
+
+.link:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(182, 204, 218);
+
+}

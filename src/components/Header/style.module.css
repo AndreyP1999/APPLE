@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+
+}
+
+.logo {
+    aspect-ratio: 41/50;
+    width: 2em;
+}
+
+.interface {
+    display: flex;
+
+    align-items: center;
+flex-grow: 1;
+    justify-content: space-between;
+
+}
+
+.nav {
+    gap: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.btnlist {
+    display: flex;
+    gap: 1em;
+}
+.line{
+    width: 1px;
+    background: white;
+}
+.btn {
+    background: inherit;
+}
+.ContentBtn{
+    font-size: 1.5em;
+}

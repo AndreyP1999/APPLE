@@ -1,0 +1,45 @@
+.advert {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.bottomMenu {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.listProducts {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+
+}
+
+.iconsProd {
+    background: inherit;
+}
+
+.listcolors {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.btn__changeColor {
+    width: 131px;
+    aspect-ratio: 18/9;
+}
