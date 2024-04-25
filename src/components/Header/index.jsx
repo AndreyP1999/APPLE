@@ -11,11 +11,10 @@ export const Header = memo(() => (
         </a>
         <div className={style.interface}>
             <nav className={style.nav}>
-                <LinkHeader path="./mac" text="Mac" />
-                <LinkHeader path="./iphone" text="IPhone" />
-                <LinkHeader path="./ipad" text="ipad" />
-                <LinkHeader path="./iwatch" text="IWatch" />
-                <LinkHeader path="./support" text="Support" />
+                <LinkHeader path="IWatch" text="IWatch" isNavigate={true} folder="apple _watch" />
+                <LinkHeader path="IPhone" text="IPhone" isNavigate={true} folder="apple_iphone" />
+                <LinkHeader path="IVision" text="IVision" isNavigate={true} folder="apple_vision" />
+                <LinkHeader path="https://github.com/AndreyP1999/APPLE" text="Pезуме" isNavigate={false} folder="" />
             </nav>
             <div className={style.btnlist}>
                 <button className={style.btn}>

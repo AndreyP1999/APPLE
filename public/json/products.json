@@ -1,34 +1,98 @@
 {
-    "apple": [
+    "watch": [
         {
             "name": "Apple Watch Series 9 black",
             "color": "black",
             "price": 1000,
-            "url": "apple_watch_s9_gps_black.gltf"
+            "url": "black.gltf"
         },
         {
             "name": "Apple Watch Series 9 blue",
             "color": "blue",
             "price": 1000,
-            "url": "apple_watch_s9_gps_blue.gltf"
+            "url": "blue.gltf"
         },
         {
             "name": "Apple Watch Series 9 gold",
             "color": "gold",
             "price": 1000,
-            "url": "apple_watch_s9_gps_gold.gltf"
+            "url": "gold.gltf"
         },
         {
             "name": "Apple Watch Series 9 red",
             "color": "red",
             "price": 1000,
-            "url": "apple_watch_s9_gps_red.gltf"
+            "url": "red.gltf"
         },
         {
             "name": "Apple Watch Series 9 white",
             "color": "white",
             "price": 1000,
-            "url": "apple_watch_s9_gps_white.gltf"
+            "url": "white.gltf"
+        }
+    ],
+    "iphone": [
+        {
+            "name": "apple iphone 12 black",
+            "color": "black",
+            "price": 1000,
+            "url": "black.gltf"
+        },
+        {
+            "name": "apple iphone 12 blue",
+            "color": "blue",
+            "price": 1000,
+            "url": "blue.gltf"
+        },
+        {
+            "name": "apple iphone 12 gold",
+            "color": "gold",
+            "price": 1000,
+            "url": "gold.gltf"
+        },
+        {
+            "name": "apple iphone 12 red",
+            "color": "red",
+            "price": 1000,
+            "url": "red.gltf"
+        },
+        {
+            "name": "apple iphone 12 white",
+            "color": "white",
+            "price": 1000,
+            "url": "white.gltf"
+        }
+    ],
+    "vision": [
+        {
+            "name": "apple vision black",
+            "color": "black",
+            "price": 1000,
+            "url": "black.gltf"
+        },
+        {
+            "name": "apple vision blue",
+            "color": "blue",
+            "price": 1000,
+            "url": "blue.gltf"
+        },
+        {
+            "name": "apple vision gold",
+            "color": "gold",
+            "price": 1000,
+            "url": "gold.gltf"
+        },
+        {
+            "name": "apple vision red",
+            "color": "red",
+            "price": 1000,
+            "url": "red.gltf"
+        },
+        {
+            "name": "apple vision white",
+            "color": "white",
+            "price": 1000,
+            "url": "white.gltf"
         }
     ]
 }

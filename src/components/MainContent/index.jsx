@@ -1,25 +1,38 @@
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Article } from "../../UI/Article";
 import { MainCanvas } from "../MainCanvas";
 import { Suspense, useEffect } from 'react';
 import style from "./style.module.css";
-import { useRef } from "react";
 import { useState } from "react";
 export const MainContent = ({ text, path }) => {
+    let location = useLocation();
+    const [file, setFile] = useState("apple _watch/black.gltf");
+    const [currentProducts, setCurrentProduucts] = useState([]);
+
+    
+    const changeFile = (currnetFile) => {
+        const folder = location.state?.folder ?? "apple _watch";
+        console.log(`${folder}/${currnetFile}`)
+        setFile(`${folder}/${currnetFile}`);
+    }
+
     useEffect(() => {
         fetch("/json/products.json")
             .then((res) => res.json())
             .then((data) => {
-                setCurrentProduucts(data.apple);
+                setCurrentProduucts(data.iphone);
             });
     }, []);
-    const sectionRef = useRef(null);
-    const [file, setFile] = useState("apple_watch_s9_gps_black.gltf");
-    const [currentProducts, setCurrentProduucts] = useState([]);
+
+    useEffect(() => {
+        changeFile("black.gltf")
+    }, [location]);
+
+
     const handlerChangeFile = (e) => {
-        const file = e.target.getAttribute("data-file")
-        if (file) {
-            setFile(file);
+        const currnetFile = e.target.getAttribute("data-file")
+        if (currnetFile) {
+            changeFile(currnetFile)
         }
     };
     return (
