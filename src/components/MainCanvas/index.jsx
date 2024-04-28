@@ -14,8 +14,8 @@ export const MainCanvas = ({ file }) => {
                 <directionalLight color="red" position={[0, 5, 0]} />
                 <ambientLight color="white" />
                 <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 2.2} />
-                <Stage adjustCamera intensity={0.2} shadows="contact" >
-                    <primitive object={gltf.scene} scale={0.2} />
+                <Stage adjustCamera intensity={4} shadows="contact" >
+                    <primitive object={gltf.scene} scale={0.1} />
                 </Stage>
             </Canvas>
         </div>
