@@ -8,7 +8,7 @@ import { OrbitControls } from "@react-three/drei";
 export const MainCanvas = ({ file }) => {
     let gltf = useLoader(GLTFLoader, '/3d_Model/' + file);
     return (
-        <div id="root" className={style.canvas}>
+        <div id="root" style={{position:"relative"}} className={style.canvas}>
             <Canvas shadows flat linear>
                 <directionalLight color="red" position={[0, 5, 0]} />
                 <ambientLight color="white" />

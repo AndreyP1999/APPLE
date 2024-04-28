@@ -3,6 +3,11 @@ body {
 
 }
 
+html,
+body {
+ 
+}
+
 * {
   list-style: none;
   background: none;
@@ -35,6 +40,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+
   padding: 1.6em 2.8em;
+}
+@media screen and (max-width: 800px) {
+  html{
+    font-size: clamp(0.6rem, 2vw, 1rem);
+  }
 }

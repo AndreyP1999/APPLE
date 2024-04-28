@@ -8,14 +8,7 @@ export const MainContent = ({ text, path }) => {
     let location = useLocation();
     const [file, setFile] = useState("apple _watch/black.gltf");
     const [currentProducts, setCurrentProduucts] = useState([]);
-
-    
-    const changeFile = (currnetFile) => {
-        const folder = location.state?.folder ?? "apple _watch";
-        console.log(`${folder}/${currnetFile}`)
-        setFile(`${folder}/${currnetFile}`);
-    }
-
+    const [index, setIndex] = useState(0);
     useEffect(() => {
         fetch("/json/products.json")
             .then((res) => res.json())
@@ -24,11 +17,19 @@ export const MainContent = ({ text, path }) => {
             });
     }, []);
 
+    const changeFile = (currnetFile) => {
+        const folder = location.state?.folder ?? "apple_watch";
+        console.log(`${folder}/${currnetFile}`)
+        setFile(`${folder}/${currnetFile}`);
+    }
+
     useEffect(() => {
-        changeFile("black.gltf")
-    }, [location]);
+        const file = currentProducts[index]?.url ?? "black.gltf";
+
+        changeFile(file)
 
 
+    }, [index]);
     const handlerChangeFile = (e) => {
         const currnetFile = e.target.getAttribute("data-file")
         if (currnetFile) {
@@ -37,7 +38,7 @@ export const MainContent = ({ text, path }) => {
     };
     return (
         <>
-            <section className={style.advert}>
+            <article className={style.advert}>
                 <Article
                     heading={<><b>The Perfect Moment</b> <br /> Between Past And <br />  Future.`</>}
                     href={'/'}
@@ -46,14 +47,14 @@ export const MainContent = ({ text, path }) => {
                 <Suspense fallback={<></>}>
                     <MainCanvas file={file} />
                 </Suspense>
-            </section>
-            <section className={style.bottomMenu}>
+            </article>
+            <article className={style.bottomMenu}>
                 <div className={style.listProducts}>
-                    <button>
+                    <button className={style.btn__arrow} onClick={() => { setIndex(index - 1 < 0 ? currentProducts.length - 1 : index - 1) }}>
                         <img className={style.iconsProd} src="/icons/arrowR.svg" alt="" />
                     </button>
-                    <p> 1</p>
-                    <button>
+                    <p> {index + 1}</p>
+                    <button className={style.btn__arrow} onClick={() => { setIndex(index + 1 > currentProducts.length - 1 ? 0 : index + 1) }}>
                         <img className={style.iconsProd} src="/icons/arrowL.svg" alt="" />
                     </button>
                 </div>
@@ -63,7 +64,7 @@ export const MainContent = ({ text, path }) => {
                     ))}
 
                 </div>
-            </section>
+            </article>
 
         </>
     )

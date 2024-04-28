@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-
+    max-height: 80%;
 }
 
 .bottomMenu {
@@ -15,7 +15,7 @@
     gap: 16px;
     justify-content: space-between;
     align-items: center;
-    padding-right: 30px;
+    flex-wrap: wrap;
 }
 
 .listProducts {
@@ -29,6 +29,8 @@
 
 .iconsProd {
     background: inherit;
+
+
 }
 
 .listcolors {
@@ -40,6 +42,35 @@
 }
 
 .btn__changeColor {
-    width: 131px;
+
+    border: 1px solid;
+    border-radius: 20px;
+    opacity: 0.68;
+    cursor: pointer;
+    width: min(131px, 12vw);
     aspect-ratio: 18/9;
+}
+
+.btn__arrow {
+    cursor: pointer;
+}
+
+.btn__changeColor:hover,
+.btn__arrow:hover {
+    scale: 1.2;
+}
+
+@media screen and (max-width: 800px) {
+    .advert {
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 20px;
+
+
+
+    }
+    ._canvas_n7ims_1{
+        width: 100%;
+        flex-grow: 0;
+    }
 }
