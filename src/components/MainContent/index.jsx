@@ -4,6 +4,7 @@ import { MainCanvas } from "../MainCanvas";
 import { Suspense, useEffect } from 'react';
 import style from "./style.module.css";
 import { useState } from "react";
+import LoadingCommponents from "../../UI/LoadingComponent/page";
 export const MainContent = ({ text, path }) => {
     let location = useLocation();
     const [file, setFile] = useState("apple _watch/black.gltf");
@@ -29,7 +30,7 @@ export const MainContent = ({ text, path }) => {
         changeFile(file)
 
 
-    }, [index]);
+    }, [index,location]);
     const handlerChangeFile = (e) => {
         const currnetFile = e.target.getAttribute("data-file")
         if (currnetFile) {
@@ -44,7 +45,7 @@ export const MainContent = ({ text, path }) => {
                     href={'/'}
                     text={`Bye Now`}
                 />
-                <Suspense fallback={<></>}>
+                <Suspense fallback={<LoadingCommponents />}>
                     <MainCanvas file={file} />
                 </Suspense>
             </article>
